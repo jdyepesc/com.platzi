@@ -1,22 +1,19 @@
 package com.platzi.javatests.util;
 
 
+import org.junit.Assert;
+import org.junit.Test;
 
 public class StringUtilTest {
-    public static void main(String[] args) {
+    @Test
+    public void testRepeat() {
        String result =StringUtil.repeat("hola",3);
-       System.out.println(result);
+        Assert.assertEquals("holaholahola",result);
 
-        if (!result.equals("holaholahola")) {
-            System.out.println("ERROR");
-        }
 
-        String result2 =StringUtil.repeat("Hola",2);
-        System.out.println(result2);
 
-        if (!result.equals("hola")) {
-            System.out.println("ERROR");
-        }
+        String result2 =StringUtil.repeat("hola",1);
+        Assert.assertEquals("hola",result2);
 
     }
 }
