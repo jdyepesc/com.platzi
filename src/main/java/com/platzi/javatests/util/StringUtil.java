@@ -5,6 +5,10 @@ public class StringUtil {
 
         String result = "";
 
+        if (times <0){
+            throw new IllegalArgumentException("negative times not allow");
+        }
+
         for (int i = 0; i < times; i++) {
 
             result += str;
